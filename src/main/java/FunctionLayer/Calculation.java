@@ -9,9 +9,7 @@ public class Calculation
     private int bigL = 0; //is set to the size of the bricks
     private int mediumL = 0; // ^
     private int smallL = 0; // ^^
-    private int big = 0;
-    private int medium = 0;
-    private int small = 0;
+
     
     private int totalCounterUneven = 0;
     private int totalCounterEven = 0;
@@ -236,18 +234,6 @@ public class Calculation
         totalBricks.add(total);
         
         return total;
-    }
-
-    public int getBig() {
-        return big;
-    }
-
-    public int getMedium() {
-        return medium;
-    }
-
-    public int getSmall() {
-        return small;
     }
 
     public ArrayList<Integer> getUnevenLength() 

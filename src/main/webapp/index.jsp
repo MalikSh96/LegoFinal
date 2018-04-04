@@ -12,7 +12,7 @@
         <title>Welcome page</title>
     </head>
     <body>
-        <h1>Welcome to Sem 2</h1>
+        <h1>Lego</h1>
         
         <table>
             <tr><td>Login</td>
@@ -47,7 +47,7 @@
             </tr>
         </table>
         
-        <a href="FrontController?command=help">Få hjælp til din bestilling</a>
+        <a href="FrontController?command=help">Need help? Press here!</a>
         
         <% String error = (String) request.getAttribute( "error");
            if ( error != null) { %>

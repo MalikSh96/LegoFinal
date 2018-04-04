@@ -80,7 +80,7 @@ public class OrderMapper
         try 
         {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM useradmin.preorders where userID = " + order.getUserId();
+            String SQL = "SELECT * FROM useradmin.preOrders where userID = " + order.getUserId();
             
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet resultset = ps.executeQuery();
@@ -114,7 +114,7 @@ public class OrderMapper
         try 
         {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM useradmin.preorders where userID = " + ID;
+            String SQL = "SELECT * FROM useradmin.preOrders where userID = " + ID;
             
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet resultset = ps.executeQuery();
@@ -147,7 +147,7 @@ public class OrderMapper
          
          try {
              Connection con = Connector.connection();
-             String sql = "Select id from preorders order by id"; //useradmin.preorders
+             String sql = "Select id from preOrders order by id"; //useradmin.preorders
              
              PreparedStatement ps = con.prepareStatement( sql, Statement.RETURN_GENERATED_KEYS );
              
@@ -168,7 +168,7 @@ public class OrderMapper
             int sent = 0;
         try {
              Connection con = Connector.connection();
-             String sql = "Select orderConfirmed from preorders where id= '" + id +"'"; //useradmin.preorders
+             String sql = "Select orderConfirmed from preOrders where id= '" + id +"'"; //useradmin.preorders
              
              PreparedStatement ps = con.prepareStatement( sql, Statement.RETURN_GENERATED_KEYS );
              
@@ -192,7 +192,7 @@ public class OrderMapper
         try 
         {
             Connection con = Connector.connection();
-            String SQL = "update preorders set orderConfirmed= '1' where id= '"+id+"'";
+            String SQL = "update preOrders set orderConfirmed= '1' where id= '"+id+"'";
             
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS ); 
            // ps.setInt(1, user.getId()); //user id
@@ -202,10 +202,6 @@ public class OrderMapper
             ps.executeUpdate();
             } catch( SQLException | ClassNotFoundException ex) {
         throw new Error( ex.getMessage() );
-}
-
-
-         
-     }
-     
+        } 
+     }    
 }
